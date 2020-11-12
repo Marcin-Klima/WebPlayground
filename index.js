@@ -35,3 +35,9 @@ document.addEventListener('keyup', (e) => {
 document.addEventListener('scroll', (e) => {
     console.log("SCROLLIN!");
 });
+
+document.addEventListener('keyup', (e) => {
+    if(e.code === 'KeyW') {
+        AddNewPost();
+    }
+})

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/index.css">
     <script src="index.js"></script>
 </head>
 <body>
@@ -17,21 +17,19 @@
     </div>
 </div>
 
-<!--<p id="string"></p>-->
+<div id="body-div">
+    <div class="message-div">
+        <button onclick="AddNewPost()">Add new post!</button>
 
-<!--<button onclick="AddAnotherParagraph()">Click Me!</button>-->
+        <form>
+            <textarea id="message-field"></textarea>
+            <br>
+            <input type="button" value="Wyślij">
+        </form>
+    </div>
 
-<div class="news-div">
-    <button onclick="AddNewPost()">Add new post!</button>
-
-    <form>
-        <textarea id="message-field"></textarea>
-        <br>
-        <input type="button" value="Wyślij">
-    </form>
-</div>
-
-<div id="wall">
+    <div id="wall">
+    </div>
 </div>
 
 </body>
