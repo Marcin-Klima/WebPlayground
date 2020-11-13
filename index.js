@@ -1,4 +1,7 @@
+let textFieldHeight;
+
 let Main = () => {
+    textFieldHeight = document.getElementById('message-field').clientHeight;
 }
 
 let AddNewPost = () => {
@@ -26,18 +29,15 @@ let AddNewPost = () => {
 }
 
 document.addEventListener('DOMContentLoaded', Main);
-document.addEventListener('keyup', (e) => {
-    if (e.code === "KeyD") {
-        console.log("scroll Y: " + window.scrollY);
-        console.log("Inner height: " + window.innerHeight);
-    }
-})
-document.addEventListener('scroll', (e) => {
-    console.log("SCROLLIN!");
-});
 
 document.addEventListener('keyup', (e) => {
-    if(e.code === 'KeyW') {
+    if (e.code === "KeyD") {
+        console.log("topnav height: " + document.getElementById('topnav').clientHeight);
+    } else if (e.code === 'KeyW') {
         AddNewPost();
     }
 })
+
+document.addEventListener('scroll', (e) => {
+    console.log("SCROLLIN!");
+});
