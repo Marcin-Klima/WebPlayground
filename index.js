@@ -1,15 +1,17 @@
-let textFieldHeight;
+let textField;
 
 let Main = () => {
-    textFieldHeight = document.getElementById('message-field').clientHeight;
+    textField = document.getElementById('message-field');
 }
 
-let AddNewPost = () => {
-    const string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n" +
-        "            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex\n" +
-        "            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n" +
-        "            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit\n" +
-        "            anim id est laborum.";
+let AddNewPost = (string) => {
+    if(string === undefined) {
+        string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n" +
+            "            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex\n" +
+            "            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n" +
+            "            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit\n" +
+            "            anim id est laborum.";
+    }
 
     let wall = document.getElementById('wall');
 
@@ -35,6 +37,9 @@ document.addEventListener('keyup', (e) => {
         console.log("topnav height: " + document.getElementById('topnav').clientHeight);
     } else if (e.code === 'KeyW') {
         AddNewPost();
+    } else if (e.code === 'Enter') {
+        e.preventDefault();
+        console.log("enter");
     }
 })
 
