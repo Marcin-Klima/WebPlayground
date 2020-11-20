@@ -17,26 +17,43 @@
     </div>
 </div>
 
-<div id="left-block">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.</p>
-</div>
-
 <div id="main-container">
-    <div id="message-div">
-        <button onclick="AddNewPost()">Add new post!</button>
+    <div id="left-container" class="side-panel">
+        <p>An element with position: sticky; is positioned based on the user's scroll position.
 
-        <form>
-            <textarea id="message-field"></textarea>
-            <br>
-            <button id="pulse-button" onclick="">Wyślij</button>
-        </form>
+            A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned
+            relative until a given offset position is met in the viewport - then it "sticks" in place (like
+            position:fixed).
+
+            Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a
+            -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for
+            sticky positioning to work.</p>
     </div>
+    <!--    -->
+    <div id="center-container">
+        <div id="message-div">
+            <button onclick="AddNewPost()">Add new post!</button>
 
-    <div id="wall">
+            <form>
+                <textarea id="message-field"></textarea>
+                <br>
+                <button id="pulse-button" onclick="">Wyślij</button>
+            </form>
+        </div>
+        <div id="wall">
+        </div>
+    </div>
+    <!--    -->
+    <div id="right-container" class="side-panel">
+        <p>An element with position: sticky; is positioned based on the user's scroll position.
+
+            A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned
+            relative until a given offset position is met in the viewport - then it "sticks" in place (like
+            position:fixed).
+
+            Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a
+            -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for
+            sticky positioning to work.</p>
     </div>
 </div>
 

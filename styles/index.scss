@@ -1,17 +1,39 @@
 $message-field-base-height: 30px;
+$header-height: 50px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  margin: 0;
   font-family: Arial;
 }
 
 #main-container {
   position: relative;
-  top: 50px;
-  margin: 0 auto;
-  width: 50%;
-  align-content: center;
-  background: #92806D;
+  top: $header-height;
+  display: flex;
+  align-items: flex-start;
+
+  div {
+    flex-grow: 1;
+  }
+
+  #center-container {
+    background-color: #92806D;
+  }
+
+  .side-panel {
+    min-width: 270px;
+    max-width: 330px;
+    background-color: gainsboro;
+    height: calc(100vh - 50px);
+    position: sticky;
+    position: -webkit-sticky;
+    align-self: flex-start;
+    top: $header-height;
+  }
 }
 
 #topnav {
@@ -19,6 +41,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 100;
+  height: $header-height;
 
   //inside block
   div {
@@ -48,7 +71,6 @@ body {
 #message-div {
   margin: 0 auto;
   padding: 15px 15px;
-  width: 100%;
   min-height: 100px;
   text-align: center;
 }
@@ -68,14 +90,6 @@ body {
     outline: none;
     width: 400px;
   }
-}
-
-#left-block {
-  background-color: #694469;
-  position: fixed;
-  top: 50px;
-  height: calc(100vh - 50px);
-  width: 300px;
 }
 
 .foo-div {
